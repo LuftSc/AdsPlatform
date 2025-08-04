@@ -1,14 +1,20 @@
 # Тестовое задание для EffectiveApps
 
-## Для работы программы необходимо запустить её в Docker. Перейдите в папку TestTask-AdsPlatform и выполните последовательно следующие команды:
+## Для работы программы необходимо запустить её в Docker. Перейдите в папку с решением (AdsPlatform) и выполните последовательно следующие команды:
 
 ```bash
-docker build -t ads-platform .
+dotnet restore
 ```
 
 ```bash
-docker run -d -p 8080:8080 --name ads-platform-container ads-platform
+dotnet run --project TestTask-AdsPlatform/TestTask-AdsPlatform.csproj
 ```
 
 После успешного запуска программный интерфейс приложения (API) будет доступно по адресу:
-http://localhost:8080/swagger
+http://localhost:5244/swagger
+
+Для запуска Unit-тестов выполните команду
+
+```bash
+dotnet test
+```
