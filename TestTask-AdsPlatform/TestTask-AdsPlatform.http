@@ -1,0 +1,6 @@
+@TestTask_AdsPlatform_HostAddress = http://localhost:5244
+
+GET {{TestTask_AdsPlatform_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
